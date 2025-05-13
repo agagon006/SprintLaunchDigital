@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SprintLaunchDigital - Fast, clean websites with exceptional performance, built in 3 days with persuasive copy">
+    <title>SprintLaunchDigital | Fast, Clean Websites</title>
+    <!-- Updated at: 2025-05-06T22:15:00 -->
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/images/SLD-logo-transparent.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sprint-orange': '#E84A15', // Primary accent color (darkened for WCAG AA compliance)
+                        'deep-navy': '#00254D',    // Dark backgrounds
+                        'energy-teal': '#00C6AE',   // Secondary highlights
+                        'cool-gray': '#F5F7FA',    // Main page background
+                        'charcoal': '#333A40',     // Body text
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="font-sans antialiased text-charcoal bg-cool-gray">
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="logo flex items-center">
+                <span class="text-2xl font-bold"><span class="text-color-primary">SprintLaunch</span><span class="text-white">Digital</span></span>
+            </div>
+            <ul class="nav-links hidden md:flex space-x-8">
+                <li><a href="#hero" class="nav-link active" aria-current="page">Home</a></li>
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#about" class="nav-link">Why <span class="text-color-primary">SprintLaunch</span></a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="md:hidden focus:outline-none text-white" id="menu-toggle" aria-label="Open menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-4 pt-2 pb-4 space-y-4">
+                <div class="flex items-center pb-4 mb-3 border-b border-gray-700">
+                    <span class="text-xl font-bold"><span class="text-color-primary">SprintLaunch</span><span class="text-white">Digital</span></span>
+                </div>
+                <a href="#hero" class="mobile-nav-link active block">Home</a>
+                <a href="#work" class="mobile-nav-link block">Work</a>
+                <a href="#about" class="mobile-nav-link block">Why <span class="text-color-primary">SprintLaunch</span></a>
+                <a href="#services" class="mobile-nav-link block">Services</a>
+                <a href="#contact" class="mobile-nav-link block">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero min-h-screen flex items-center pt-24 pb-24 relative overflow-hidden" data-aos="fade-up" data-aos-duration="800">
+        <!-- Light Burst Background -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/light-burst-bg.png" alt="Light burst background" class="w-full h-full object-cover" />
+        </div>
+        <!-- No overlay to test text readability -->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col items-center text-center">
+                <h1 class="text-white text-shadow-lg">Launch <span class="faster-text">faster</span> with sites <br>that actually sell.</h1>
+                <p class="mt-4 text-white text-xl mb-10 max-w-3xl text-shadow-md">
+                  Your lean, single-page sprint to conversion-focused websites.
+                </p>
+                <a href="#contact" class="btn-primary">
+                    Reserve Your 72-Hour Slot
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-20 bg-white" data-aos="fade-up" data-aos-duration="800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <header class="mb-12 text-center">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4 text-deep-navy">Our Work in Motion</h2>
+                <p class="mt-4 text-lg text-charcoal/80">
+                    A lean showcase of live sites, in‑progress builds, and the systems that power our 72‑hour sprints.
+                </p>
+            </header>
+
+            <!-- Work Grid -->
+            <div class="work-grid">
+                <!-- Card 1: MOTIVSPRINT -->
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/motivsprint.png" alt="MOTIVSPRINT landing page screenshot" height="200">
+                    <div class="p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-deep-navy">MOTIVSPRINT Landing Page</h3>
+                            <p class="mt-2 text-sm text-charcoal/70">
+                                Built in <strong>3 days</strong> — 1‑second load time and a <strong>60% email open rate</strong>.
+                            </p>
+                        </div>
+                        <a href="https://www.motivsprint.com" target="_blank" class="inline-block mt-4 text-sprint-orange font-medium hover:underline">View Live →</a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Hair Art by Meg -->
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/hair-art.png" alt="Hair Art by Meg website screenshot" height="200">
+                    <div class="p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-deep-navy">Hair Art by Meg Website</h3>
+                            <p class="mt-2 text-sm text-charcoal/70">
+                                Modern salon portfolio — <strong>300% booking increase</strong> within first 2 weeks of launch.
+                            </p>
+                        </div>
+                        <a href="https://hair-art-designs-jlagagon.replit.app/" target="_blank" class="inline-block mt-4 text-sprint-orange font-medium hover:underline">View Live →</a>
+                    </div>
+                </div>
+
+                <!-- Card 3: SprintChallenge Fitness -->
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/fitness-runner.png" alt="Runner at starting blocks on running track" height="200">
+                    <div class="p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-deep-navy">SprintChallenge Fitness App</h3>
+                            <p class="mt-2 text-sm text-charcoal/70">
+                                Progressive web app for fitness challenge tracking with progress charts and social sharing.
+                            </p>
+                        </div>
+                        <a href="https://fitness-sprint-tracker-jlagagon.replit.app/login" target="_blank" class="inline-block mt-4 text-sprint-orange font-medium hover:underline">View Live →</a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Copy Services -->
+                <div class="card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="images/quill-pen.png" alt="Quill pen writing on parchment" class="bg-sprint-orange" height="200">
+                    <div class="p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-deep-navy">Copywriting Services</h3>
+                            <p class="mt-2 text-sm text-charcoal/70">
+                                Compelling site copy, email sequences, and content that converts visitors into customers.
+                            </p>
+                        </div>
+                        <a href="#services" class="inline-block mt-4 text-sprint-orange font-medium hover:underline">View Services →</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- CTA -->
+            <div class="mt-16 text-center">
+                <h3 class="text-2xl font-semibold">Want your project here next?</h3>
+                <a href="#contact" class="inline-block mt-4 bg-sprint-orange hover:bg-[#FF9E4A] text-white px-8 py-3 rounded-xl shadow-lg transition-colors duration-300">Book a 15‑Minute Call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-cool-gray" data-aos="fade-up" data-aos-duration="800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">Why <span class="text-sprint-orange">SprintLaunch</span><span class="text-deep-navy">Digital</span>?</h2>
+            
+            <div class="max-w-4xl mx-auto highlight shadow-lg overflow-hidden">
+                <div class="p-8 md:p-10">
+                    <h3 class="text-2xl font-bold text-deep-navy mb-6">Our Approach</h3>
+                    
+                    <div class="features mb-8 text-charcoal">
+                        <div><span class="icon">✓</span> 72-hour turnaround time</div>
+                        <div><span class="icon">✓</span> Mobile-first designs</div>
+                        <div><span class="icon">✓</span> Conversion-focused layout</div>
+                        <div><span class="icon">✓</span> SEO-friendly structure</div>
+                        <div><span class="icon">✓</span> Affordable fixed pricing</div>
+                        <div><span class="icon">✓</span> No long-term contracts</div>
+                        <div><span class="icon">✓</span> Optimized performance</div>
+                        <div><span class="icon">✓</span> Clear, impactful messaging</div>
+                    </div>
+                    
+                    <div class="space-y-4 text-lg text-charcoal mb-8">
+                        <p><span class="text-sprint-orange">SprintLaunch</span><span class="text-deep-navy">Digital</span> builds one‑page websites at sprint speed. Hand us your core message, a few images, and the single action you want visitors to take—buy, book, or subscribe—and we'll deliver a polished, mobile‑friendly page in just 72 hours. From the first click it loads fast, looks sharp on any screen, and funnels people straight to that action.</p>
+
+                        <p>We keep things lean on purpose. By focusing on one page, we skip the maze of sub‑menus and the never‑ending revision cycles that slow most web projects to a crawl. A slim layout means you launch sooner, test real traffic sooner, and dodge the hidden costs that pile up in longer builds.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <a href="#contact" class="inline-block bg-sprint-orange hover:bg-[#FF9E4A] text-white font-semibold py-3 px-8 rounded-xl transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-sprint-orange focus:ring-opacity-50">
+                            Reserve Your Sprint Slot
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white" data-aos="fade-up" data-aos-duration="800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-8 text-deep-navy text-center">Choose Your Sprint Bundle</h2>
+            
+            <div class="pricing-grid max-w-6xl mx-auto">
+                <!-- Starter Site -->
+                <div class="plan-card shadow-lg transition-all duration-300 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="plan-header font-bold">
+                        Starter Site
+                    </div>
+                    <div class="p-6 text-center flex-grow">
+                        <ul class="text-sm text-charcoal/80 space-y-2 mb-6 text-left">
+                            <li><span class="icon">✓</span> Responsive 1-page design</li>
+                            <li><span class="icon">✓</span> Basic SEO setup</li>
+                            <li><span class="icon">✓</span> Custom domain setup</li>
+                        </ul>
+                        <div class="text-2xl font-bold text-sprint-orange mt-auto mb-4">$600</div>
+                        <a href="#contact" class="inline-block w-full bg-white border-2 border-sprint-orange text-sprint-orange hover:bg-sprint-orange hover:text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Sales-Ready Site -->
+                <div class="plan-card popular shadow-lg transition-all duration-300 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="badge">BEST SELLER</div>
+                    <div class="plan-header font-bold">
+                        Sales-Ready Site
+                    </div>
+                    <div class="p-6 text-center flex-grow">
+                        <ul class="text-sm text-charcoal/80 space-y-2 mb-6 text-left">
+                            <li><span class="icon">✓</span> Everything in Starter</li>
+                            <li><span class="icon">✓</span> Persuasive copy (headlines, CTAs)</li>
+                            <li><span class="icon">✓</span> 1 round of edits</li>
+                        </ul>
+                        <div class="text-2xl font-bold text-sprint-orange mt-auto mb-4">$850</div>
+                        <a href="#contact" class="inline-block w-full bg-sprint-orange text-white hover:bg-[#FF9E4A] font-bold py-2 px-4 rounded-lg transition-colors duration-300">Let's Go</a>
+                    </div>
+                </div>
+
+                <!-- Growth Kit -->
+                <div class="plan-card shadow-lg transition-all duration-300 hover:shadow-xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="plan-header font-bold">
+                        Growth Kit
+                    </div>
+                    <div class="p-6 text-center flex-grow">
+                        <ul class="text-sm text-charcoal/80 space-y-2 mb-6 text-left">
+                            <li><span class="icon">✓</span> Everything in Sales-Ready</li>
+                            <li><span class="icon">✓</span> Email capture + welcome drip</li>
+                            <li><span class="icon">✓</span> 3-post launch content plan</li>
+                        </ul>
+                        <div class="text-2xl font-bold text-sprint-orange mt-auto mb-4">$1,200</div>
+                        <a href="#contact" class="inline-block w-full bg-white border-2 border-sprint-orange text-sprint-orange hover:bg-sprint-orange hover:text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">Supercharge</a>
+                    </div>
+                </div>
+
+                <!-- Copywriting Package -->
+                <div class="plan-card shadow-lg transition-all duration-300 hover:shadow-xl" data-aos="fade-up" data-aos-delay="400">
+                    <div class="plan-header font-bold">
+                        Copywriting Sprint
+                    </div>
+                    <div class="p-6 text-center flex-grow">
+                        <ul class="text-sm text-charcoal/80 space-y-2 mb-6 text-left">
+                            <li><span class="icon">✓</span> Landing-page or site copy</li>
+                            <li><span class="icon">✓</span> 3-email sequence</li>
+                            <li><span class="icon">✓</span> 2 rounds of edits</li>
+                        </ul>
+                        <div class="text-2xl font-bold text-sprint-orange mt-auto mb-4">$500</div>
+                        <a href="#contact" class="inline-block w-full bg-white border-2 border-sprint-orange text-sprint-orange hover:bg-sprint-orange hover:text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">Write My Words</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white" data-aos="fade-up" data-aos-duration="800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">Get In Touch</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Let's discuss how we can help bring your next project to life with clean code and fast performance.</p>
+            
+            <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl overflow-hidden">
+                <div class="md:flex">
+                    <!-- Contact Info -->
+                    <div class="md:w-2/5 bg-[#FFF5EB] text-deep-navy p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-deep-navy">Contact Information</h3>
+                        <div class="space-y-4 mb-10">
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 mr-3 mt-1 text-sprint-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <div>
+                                    <p class="text-sm font-medium text-deep-navy">Email</p>
+                                    <p class="text-sprint-orange font-medium">admin@sprintlaunchdigital.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 mr-3 mt-1 text-sprint-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <div>
+                                    <p class="text-sm font-medium text-deep-navy">Location</p>
+                                    <p class="text-sprint-orange font-medium">Los Angeles, CA</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 mr-3 mt-1 text-sprint-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                                <div>
+                                    <p class="text-sm font-medium text-deep-navy">Phone</p>
+                                    <p class="text-sprint-orange font-medium">(562) 442-4949</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="md:w-3/5 p-8">
+                        <form id="contact-form">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                </div>
+                                <div>
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                            </div>
+                            <div>
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full bg-sprint-orange hover:bg-[#FF9E4A] text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-300">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-bold"><span class="text-sprint-orange">SprintLaunch</span>Digital</div>
+                    <p class="mt-2 max-w-md">Clean, persuasive websites in 72 hours. Built for conversion, speed, and growth.</p>
+                </div>
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-center md:text-left">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a href="#about">Why SprintLaunch</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-8 text-center">
+                <p>&copy; 2023 <span class="text-sprint-orange">SprintLaunch</span>Digital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
